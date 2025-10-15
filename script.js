@@ -65,3 +65,15 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
     // Open WhatsApp
     window.open(whatsappURL, '_blank');
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (!menuToggle || !navLinks) return;
+
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    menuToggle.classList.toggle("active");
+  });
+});
